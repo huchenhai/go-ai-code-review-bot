@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: go-ai-review-bot
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: go-ai-review-bot
+
+  template:
+    metadata:
+      labels:
+        app: go-ai-review-bot
+
+    spec:
+      containers:
+      - name: go-ai-review-bot
+        image: go-ai-review-bot:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080

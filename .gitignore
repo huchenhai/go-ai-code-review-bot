@@ -1,0 +1,12 @@
+# binaries
+server
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+
+# environment
+.env
